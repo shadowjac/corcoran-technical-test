@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace Corcoran.WebApi.App_Start
 {
@@ -10,6 +6,7 @@ namespace Corcoran.WebApi.App_Start
     {
         public static void Register(HttpConfiguration httpConfiguration)
         {
+            httpConfiguration.EnableCors();
             httpConfiguration.MapHttpAttributeRoutes();
             httpConfiguration.Routes.MapHttpRoute(
                 name: "DefaultApi",
