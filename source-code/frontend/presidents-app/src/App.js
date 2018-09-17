@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="jumbotron">
+        <div className="card">
           <div className="row">
             <div className="col-sm-2">
               <img src={logoPresident} width="100px" height="100px" /></div>

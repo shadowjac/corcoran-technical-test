@@ -55,8 +55,9 @@ class Presidents extends Component {
                             </div>
                         </div>
                         <br />
-                        <table className="table striped">
-                            <thead>
+                        <span className="bg-success">President alive</span>
+                        <table className="table table-striped">
+                            <thead className="thead-dark">
                                 <tr>
                                     <th>President</th>
                                     <th>Birth Day</th>
@@ -68,7 +69,7 @@ class Presidents extends Component {
                             <tbody>
                                 {
                                     data.map((president, index) => (
-                                        <tr key={index}>
+                                        <tr key={index} className={!president.deathDate ? "bg-success" : ""}>
                                             <td>{president.name}</td>
                                             <td><Moment format="MM-DD-YYYY">{president.birthDate}</Moment></td>
                                             <td>{president.birthPlace}</td>
